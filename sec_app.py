@@ -1,9 +1,7 @@
-import json, os, pickle
+import json, os
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-os.system("echo 'starting app...'")
-password="some-password-text";
 
 # Load initial book data from books.json file
 with open('books.json') as f:
@@ -95,5 +93,5 @@ def delete_book(book_id):
     return jsonify({'message': 'Book not found'}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
