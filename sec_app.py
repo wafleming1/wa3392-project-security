@@ -1,4 +1,4 @@
-import json, os
+import json, os, pickle
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
